@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="购物车" id="btnCart">
+<input type="button" value="获取购物车商品数量" id="btnCartCount">
+<input type="button" value="购物车商品数量+1" id="btnAddCount">
+
+<input type="button" value="个人中心" id="btnPersonal">
+</body>
+<script src="cart.js"></script>
+<script>
+    (function(){
+        var btnCart=document.querySelector("#btnCart");
+        btnCart.onclick=function(){
+            //加载购物车功能？
+            cart.init();
+        }
+
+        var btnCartCount=document.querySelector("#btnCartCount");
+        btnCartCount.onclick=function(){
+
+            cart.getCount();
+        }
+
+        var btnAddCount=document.querySelector("#btnAddCount");
+        btnAddCount.onclick=function(){
+
+            cart.addCount();
+        }
+
+    })();
+</script>
+</html>

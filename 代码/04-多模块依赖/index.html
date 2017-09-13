@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .teacher-container{
+            width:600px;
+            height:300px;
+            padding:30px;
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="讲师管理" id="btnTeacher">
+</body>
+<script src="require.js"></script>
+<script>
+    require(["teacherMain"],function(teacherMain){
+
+        var btnTeaher=document.querySelector("#btnTeacher");
+        btnTeaher.onclick=function () {
+            //加载出讲师管理模块
+            teacherMain();
+        }
+    });
+</script>
+</html>

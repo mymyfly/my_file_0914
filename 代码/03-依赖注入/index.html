@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="购物车商品数量" id="btnCount">
+</body>
+<script src="require.js"></script>
+<script>
+    //以后会有依赖无数个模块，["cart","productInfo"] (cart,productInfo)
+    require(["cart"],function(cart){
+        //想要使用cart模块的返回值-->给回调函数添加一个形参
+
+        var btnCount=document.getElementById("btnCount");
+        btnCount.onclick=function(){
+            cart.getCount();
+        }
+
+        //console.log(cart);
+    });
+
+    //在添加依赖模块路径的时候，这些路径的顺序也就决定了回调函数中指定位置形参的值
+    //数组中第一个元素决定了第一个形参的值
+    //     第二个元素决定了第二个形参的值，以此类推
+
+    //如果cart模块有返回值，productInfo模块没有返回值
+    //require(["productInfo","cart"],function(cart,productInfo){
+    //          -->cart：undefined
+    //          -->productInfo：获取了cart模块的返回值
+    // })
+
+
+    //-->推荐的做法：依赖模块路径的时候，把所有的有返回值的模块放在前面，把所有的无返回值的模块放在后面
+    //  -->a、c、d：有返回值  b、e：无返回值
+    //require(["a","c","d","b","e"],function(a,c,d){
+    //
+    // })
+</script>
+</html>
