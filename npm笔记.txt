@@ -1,0 +1,73 @@
+
+npm下载插件. https://www.npmjs.com/
+8aqpt9v9
+
+
+<!--
+    1. 我们会用很多的第三方插件.
+       我们下载第三方插件/库/包/框架去哪里下?
+       我们都要去对应的官网下载。
+
+       1.1 都要去官网下载 很麻烦.
+       1.2 开发插件的人也很烦 我要做个官网.
+
+    2. npm  node package manager
+            node包管理器.
+       
+       npm是一个平台,这个平台上有全世界几乎所有的第三方包和库.
+       我们如果要下载第三方包. 只需要找npm这个平台就可以.
+
+       npm是目前最大的 并且使用人数最多的下载第3方插件的平台.
+
+
+    3. npm是基于nodejs开发的.
+       需要首先在电脑上安装npm工具
+       npm工具是集成在nodejs上.
+       所以,你的电脑上只需要安装nodejs,那么npm自然就有了.
+
+       nodejs.org
+
+       LTS: long term support  
+
+       确认node是否安装成功: node -v 是否显示版本.
+       确实npm是否安装成功: npm -v 显示npm的版本.
+
+
+    4. npm的使用.
+       4.1 先初始化项目.
+           使用cmd进入到项目根目录.
+           使用命令 npm init 来初始化项目.
+           初始化完毕之后 会在项目根目录下生成1个package.json文件.
+           这个文件中记录了项目的信息.
+
+
+       4.2 使用npm下载插件.
+           npm install 插件名称.
+           那么这个时候,就会在项目根目录下生成1个node_modules文件夹.
+           然后将下载的插件以文件夹的形式存储在node_modules文件夹中.
+           默认会下载最新版笨的插件.
+
+
+       4.3 如何删除已经下载的插件.
+           > 暴力: 直接右键删除.
+           > npm uninstall 插件名称;
+           '
+           
+       4.4 如何下载指定版本的插件呢?
+           npm install 插件名称@版本号
+           npm install jquery@1.2.1
+
+
+           查询npm平台上插件的版本.
+           npm install jquery@x.y.z
+
+
+    5.  在下载插件的时候可以带1个参数  --save
+       
+
+    -->
+
+	uploadify：上传插件 http://www.uploadify.com/documentation/
+        ueditor: 富文本编辑器 http://ueditor.baidu.com/website/
+        echarts；canvas做出来图表软件   http://echarts.baidu.com/
+
